@@ -51,14 +51,12 @@ export const addToWatchlistThunk =(stockId) => async(dispatch) => {
     
     const res = await fetch(`/api/watchlist/${stockId}/current`, {
         method: 'POST'
-    }) //end fetch
+    })
 
     if (res.ok){
-        // console.log('-----------hit here--------------');
         const stockToAdd = await res.json()
         dispatch(addToWatchlist(stockToAdd))
     } else{
-        // console.log('-----------Error here--------------');
         const error = await res.json()
         throw error
     }
@@ -70,7 +68,7 @@ export const addToWatchlistThunk =(stockId) => async(dispatch) => {
 export const removeFromWatchlistThunk =(stockId) => async(dispatch) => {
     const res = await fetch(`/api/watchlist/${stockId}/current`, {
         method: 'DELETE'
-    }) //end fetch
+    })
 
     if (res.ok){
         const result = await res.json();
@@ -93,8 +91,6 @@ const watchlistReducer = (state={}, action) =>{
         }
         case(ADD_TO_WATCHLIST):{
             const stockToAdd = action.payload;
-            // console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~');
-            console.log('\n\nstockToAdd:', stockToAdd);
             return {...state, [stockToAdd.id]: stockToAdd}
         }
         case REMOVE_FROM_WATCHLIST: {
@@ -102,14 +98,6 @@ const watchlistReducer = (state={}, action) =>{
             const stockId = action.payload;
         
             let watchlist_to_remove = newState[stockId];
-        
-            // Find watchlist_id from stock_id
-            // for (const key of Object.keys(newState)) {
-            //     if (newState[key].stock_id === stockId) {
-            //         watchlistId_to_remove = key;
-            //         break; // Exit loop once found
-            //     }
-            // }
         
             // Delete the watchlist item if found
             if (watchlist_to_remove != null) {

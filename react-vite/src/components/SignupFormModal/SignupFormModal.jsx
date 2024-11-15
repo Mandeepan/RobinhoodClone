@@ -14,6 +14,9 @@ function SignupFormModal() {
   const { closeModal } = useModal();
 
   const handleSubmit = async (e) => {
+    console.log("\n")
+    console.log("========================================signupformmodal==============================================================")
+    console.log("\n")
     e.preventDefault();
 
     if (password !== confirmPassword) {

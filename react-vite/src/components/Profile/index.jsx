@@ -2,6 +2,9 @@ import { useLoaderData } from 'react-router-dom';
 
 export default function Profile() {
     const data = useLoaderData();
+    console.log("\n")
+    console.log("========================================profile==============================================================")
+    console.log("\n")
 
     return (
         <>

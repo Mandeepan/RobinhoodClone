@@ -45,4 +45,13 @@
   .delete-yes:hover, .delete-no:hover {
     background-color: #fb641c; /* Bright orange on hover */
   }
+
+  .dark-mode .delete-modal-container {
+    background-color: grey
+  }
+
+  .dark-mode .delete-modal-container:hover {
+    background-color: grey
+  }
+  
   
