@@ -34,8 +34,20 @@ body, html {
     justify-content: flex-end; 
     align-items: center;
     min-height: 100vh;
-    padding-right: 200px;
+    width: 50%;
+    border-right: 2px solid white;
     
+  }
+
+  .login-page-container {
+    display: flex;
+  }
+
+  .login-section-container {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .login-section{
@@ -110,4 +122,16 @@ body, html {
     margin: 0;
     padding: 0;
     text-align: center;
+  }
+
+  @media (max-width: 800px) {
+    .login-page {
+      width: 0%;
+      border-right: none;
+    }
+
+    .login-section-container {
+      width: 100%
+    }
+
   }
