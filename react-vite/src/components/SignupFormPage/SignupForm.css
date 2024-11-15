@@ -8,8 +8,22 @@
     justify-content: flex-end; 
     align-items: center;
     min-height: 100vh;
-    padding-right: 150px; /* Optional spacing from the right edge */
+    width: 50%;
+    border-right: 2px solid white;
     
+  }
+
+  .signup-page-container {
+    display: flex;
+  }
+
+
+  .signup-section-container {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
   }
 
 .signup-title{
@@ -51,5 +65,17 @@
 
 .sign-up-button:hover {
   background-color: #fb641c;
+}
+
+@media (max-width: 800px) {
+  .signup-page {
+    width: 0%;
+    border-right: none;
+  }
+
+  .signup-section-container {
+    width: 100%
+  }
+
 }
 
