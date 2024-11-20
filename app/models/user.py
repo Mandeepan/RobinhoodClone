@@ -20,9 +20,6 @@ class User(db.Model, UserMixin):
     user_stocks = db.relationship("UserStock", backref="users", cascade="all, delete-orphan")
     watchlist_stocks = db.relationship("WatchlistStock", backref="users", cascade="all, delete-orphan")
 
-    # Related data
-    # tweets = db.relationship("Tweet", back_populates="author")
-    # liked_tweets = db.relationship("Tweet", back_populates="liked_by", secondary=likes)
 
     @property
     def password(self):
