@@ -48,6 +48,8 @@ export default function AllStocksList({stocks, pageSize, heightPx}) {
         }
     }
 
+    
+
 
    
     const stocksFormatter = stocks => {
