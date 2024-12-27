@@ -32,4 +32,3 @@ Render
 ---
 ![alt text](/react-vite/public/images/home-light.jpg)
 
-xxxxxxxxxxxx
