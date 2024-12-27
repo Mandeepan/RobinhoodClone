@@ -31,3 +31,5 @@ Render
 ![alt text](/react-vite/public/images/stock-light.jpg)
 ---
 ![alt text](/react-vite/public/images/home-light.jpg)
+
+xxxxxxxxxxxx
